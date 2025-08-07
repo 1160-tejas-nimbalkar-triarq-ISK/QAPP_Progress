@@ -1,0 +1,20 @@
+@glo_emr @desktop_automation @login
+Feature: gloEMR Desktop Application Login Automation # features/QEMR/Feature/glo_emr_login.feature:2
+  As a healthcare professional
+  I want to login to the gloEMR application
+  So that I can access patient records and clinical functionality
+  Background:   # features/QEMR/Feature/glo_emr_login.feature:7
+
+  @smoke @valid_login
+  Scenario: Successful login with valid credentials                                   # features/QEMR/Feature/glo_emr_login.feature:12
+    Given I have access to Windows desktop environment                                # features/QEMR/steps/glo_emr_login_steps.py:11
+    And gloEMR application is available at "C:\Program Files (x86)\gloEMR\gloEMR.exe" # features/QEMR/steps/glo_emr_login_steps.py:21
+    Given I launch gloEMR application                                                 # features/QEMR/steps/glo_emr_login_steps.py:36
+    When I wait for gloEMR login window to appear                                     # features/QEMR/steps/glo_emr_login_steps.py:55
+    And I enter username "admin"                                                      # features/QEMR/steps/glo_emr_login_steps.py:116
+    And I enter password "admin123"                                                   # features/QEMR/steps/glo_emr_login_steps.py:133
+    And I click Login button                                                          # features/QEMR/steps/glo_emr_login_steps.py:150
+    Then I should be successfully logged into gloEMR application                      # features/QEMR/steps/glo_emr_login_steps.py:166
+    When I click Log Out button                                                       # features/QEMR/steps/glo_emr_login_steps.py:292
+    And I close gloEMR application                                                    # features/QEMR/steps/glo_emr_login_steps.py:314
+

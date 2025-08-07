@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="testcases.Completed">
+        <methods>
+          <include name="Completedtab"/>
+          <include name="Completedtab_Appointmnetfilter"/>
+          <include name="completedtab_scrollbar"/>
+          <include name="Completedtab_projectfilter"/>
+          <include name="access_C"/>
+          <include name="accessProjects_C"/>
+          <include name="Completedtab_projectdeatils"/>
+          <include name="completedtab_ExporttoeExcel"/>
+          <include name="teardown"/>
+          <include name="mylogin"/>
+          <include name="setup"/>
+          <include name="Completedtab_priorityfilter"/>
+          <include name="Completedtab_viewfilter"/>
+          <include name="Assignedtab_ownerfilter"/>
+        </methods>
+      </class> <!-- testcases.Completed -->
+      <class name="testcases.Assigned">
+        <methods>
+          <include name="Assigned_Appointmnetfilter"/>
+          <include name="Assigned_priorityfilter"/>
+          <include name="Assignedtab_viewfilter"/>
+          <include name="Assignedtab_Exporttoexcel"/>
+          <include name="Assignedtab_ownerfilter"/>
+          <include name="Assignedtab"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="Assignedtab_projectdeatils"/>
+          <include name="mylogin"/>
+          <include name="Assignedtab_projectfilter"/>
+          <include name="Assignedtab_Appointmnetfilter"/>
+          <include name="access"/>
+          <include name="accessProjects"/>
+        </methods>
+      </class> <!-- testcases.Assigned -->
+      <class name="testcases.Pending_projects">
+        <methods>
+          <include name="Pending_Appdetails"/>
+          <include name="Pending_assign_Work"/>
+          <include name="Pending_projectdetails"/>
+          <include name="access"/>
+          <include name="pending_assign_btn"/>
+          <include name="accessProjects"/>
+          <include name="Pending_projectdetails_view"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="PendingProjects_exporttoexcel"/>
+          <include name="mylogin"/>
+          <include name="Pending_Assign"/>
+          <include name="pendingtabaccess"/>
+        </methods>
+      </class> <!-- testcases.Pending_projects -->
+      <class name="testcases.ReleasedTask">
+        <methods>
+          <include name="Project_filter"/>
+          <include name="teardown"/>
+          <include name="mylogin"/>
+          <include name="accessTasks"/>
+          <include name="Projects_filter"/>
+          <include name="ComplTask"/>
+          <include name="Prcaticefilter2"/>
+          <include name="setup"/>
+          <include name="automateFilters"/>
+          <include name="TaskComp_viewfilter"/>
+          <include name="ptcode_search"/>
+          <include name="access"/>
+        </methods>
+      </class> <!-- testcases.ReleasedTask -->
+      <class name="testcases.Task">
+        <methods>
+          <include name="teardown"/>
+          <include name="Allprjtab_Exporttoexcel"/>
+          <include name="mylogin"/>
+          <include name="accessProjects"/>
+          <include name="setup"/>
+          <include name="selectcompleted_filter"/>
+          <include name="Allprjtab_scrollbar"/>
+          <include name="Task_menu_access"/>
+          <include name="access"/>
+          <include name="Allprjtab_viewfilter"/>
+        </methods>
+      </class> <!-- testcases.Task -->
+      <class name="testcases.MyQueue">
+        <methods>
+          <include name="upviewfilter"/>
+          <include name="myqueueExporttoexcel"/>
+          <include name="Priorityfilter"/>
+          <include name="accessProjects"/>
+          <include name="myqueueprjtab_scrollbar"/>
+          <include name="Insurancefilter"/>
+          <include name="Prcaticefilter"/>
+          <include name="access"/>
+          <include name="Status_projectfilter"/>
+          <include name="setup"/>
+          <include name="Workstatusfilter"/>
+          <include name="teardown"/>
+          <include name="mylogin"/>
+          <include name="mYqueueprojectfilter"/>
+          <include name="closeworkaction"/>
+          <include name="location_filter"/>
+          <include name="APPTdetails_view"/>
+          <include name="Allprjtab_viewfilter"/>
+          <include name="Myqueueprjtab_projectdeatils"/>
+        </methods>
+      </class> <!-- testcases.MyQueue -->
+      <class name="testcases.All_Projects">
+        <methods>
+          <include name="Allprjtab_projectfilter"/>
+          <include name="Allprjtab_Exporttoexcel"/>
+          <include name="Allprjtab_scrollbar"/>
+          <include name="Allprjtab_projectdeatils"/>
+          <include name="teardown"/>
+          <include name="Allprjtab_priorityfilter"/>
+          <include name="Allprjtab_viewfilter"/>
+          <include name="setup"/>
+          <include name="mylogin"/>
+          <include name="allprojects_ownerfilter"/>
+          <include name="accessProjects"/>
+          <include name="Allprjtab_Appointmnetfilter"/>
+          <include name="Status_projectfilter"/>
+          <include name="alltab_Appointmnetfilter"/>
+          <include name="accessEv"/>
+        </methods>
+      </class> <!-- testcases.All_Projects -->
+      <class name="testcases.MyProjects">
+        <methods>
+          <include name="ByPatinet_exporttoexcel"/>
+          <include name="Myprojectdetails"/>
+          <include name="Bypatient_Apptdetails"/>
+          <include name="My_Byproject"/>
+          <include name="access"/>
+          <include name="My_Byproject_Assign"/>
+          <include name="teardown"/>
+          <include name="accessProjects"/>
+          <include name="mylogin"/>
+          <include name="Bypatient"/>
+          <include name="assign_btn"/>
+          <include name="Myprojectdetails_view"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.MyProjects -->
+      <class name="testcases.Insurance_crosswak">
+        <methods>
+          <include name="d_Scrollbar_Ins_crosswalk"/>
+          <include name="b_access"/>
+          <include name="setup"/>
+          <include name="a_mylogin"/>
+          <include name="teardown"/>
+          <include name="g_referral_filter"/>
+          <include name="f_filter"/>
+          <include name="e_Pagination_Ins_crosswalk"/>
+          <include name="c_access_Ins_crosswalk"/>
+        </methods>
+      </class> <!-- testcases.Insurance_crosswak -->
+      <class name="testcases.login">
+        <methods>
+          <include name="createprojectsavebtn"/>
+          <include name="mylogin"/>
+          <include name="setup"/>
+          <include name="openapptdate"/>
+          <include name="openduedaten"/>
+          <include name="open_voidbtn"/>
+          <include name="createprojectbutton"/>
+          <include name="scrollbardashboar"/>
+          <include name="openInstructions"/>
+          <include name="teardown"/>
+          <include name="openpriorityfilter"/>
+          <include name="dashboard"/>
+          <include name="openviewfilter"/>
+          <include name="access"/>
+          <include name="accessProjects"/>
+          <include name="openclearbutton"/>
+          <include name="importprojectbutton"/>
+          <include name="openexporttoexcel"/>
+          <include name="openscroll"/>
+          <include name="createprojectclient"/>
+          <include name="open_projectdeatils"/>
+          <include name="openselectgridproject"/>
+          <include name="open_addvoidcomment"/>
+          <include name="openprojectfilter"/>
+          <include name="createprojectapptdate"/>
+        </methods>
+      </class> <!-- testcases.login -->
+      <class name="testcases.View_Task">
+        <methods>
+          <include name="Myprojectdetails_view"/>
+          <include name="myqueueExporttoexcel"/>
+          <include name="Priorityfilter"/>
+          <include name="view_scrollbar"/>
+          <include name="ViewTask"/>
+          <include name="View_projectdeatils"/>
+          <include name="access"/>
+          <include name="Tasktab_viewfilter"/>
+          <include name="Status_projectfilter"/>
+          <include name="Insurancefilter"/>
+          <include name="mYqueueprojectfilter"/>
+          <include name="teardown"/>
+          <include name="locationdept_filter"/>
+          <include name="setup"/>
+          <include name="mylogin"/>
+          <include name="Workstatusfilter"/>
+          <include name="upviewfilter"/>
+          <include name="Task_menu_access"/>
+        </methods>
+      </class> <!-- testcases.View_Task -->
+      <class name="testcases.In_Process">
+        <methods>
+          <include name="In_processtab_Appointmnetfilter"/>
+          <include name="In_process_Appointmnetfilter"/>
+          <include name="In_processtab_projectfilter"/>
+          <include name="mylogin"/>
+          <include name="In_processtab"/>
+          <include name="In_processtab_priorityfilter"/>
+          <include name="In_processtab_scrollbar"/>
+          <include name="setup"/>
+          <include name="In_processtab_ownerfilter"/>
+          <include name="teardown"/>
+          <include name="access"/>
+          <include name="In_processtab_projectdeatils"/>
+          <include name="In_processtab_viewfilter"/>
+          <include name="In_processtab_Exporttoexcel"/>
+          <include name="accessProjects"/>
+        </methods>
+      </class> <!-- testcases.In_Process -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

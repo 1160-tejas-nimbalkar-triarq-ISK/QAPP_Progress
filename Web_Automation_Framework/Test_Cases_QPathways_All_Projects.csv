@@ -1,0 +1,98 @@
+Index,Test Case Statement,Verify Phrase
+1,Login to QPathways Value application,Verify user is logged in successfully
+2,Navigate to Patients tab,Verify Patients tab is accessible
+3,Open new patient registration form,Verify new patient form is displayed
+4,Enter patient first name,Verify first name is entered correctly
+5,Enter patient middle name,Verify middle name is entered correctly
+6,Enter patient last name,Verify last name is entered correctly
+7,Enter patient date of birth,Verify date of birth is entered correctly
+8,Enter patient gender,Verify gender is entered correctly
+9,Select value program,Verify value program is selected
+10,Select PGP from dropdown,Verify PGP is selected from dropdown
+11,Select provider from dropdown,Verify provider is selected from dropdown
+12,Select primary insurance from dropdown,Verify primary insurance is selected
+13,Enter primary insurance ID,Verify insurance ID is entered correctly
+14,Enter primary group ID,Verify group ID is entered correctly
+15,Select secondary insurance from dropdown,Verify secondary insurance is selected
+16,Enter secondary insurance ID,Verify secondary insurance ID is entered correctly
+17,Enter secondary group ID,Verify secondary group ID is entered correctly
+18,Enter patient address,Verify address is entered correctly
+19,Enter ZIP code and select suggestion,Verify ZIP suggestion is selected
+20,Enter mobile number,Verify mobile number is entered correctly
+21,Enter phone number,Verify phone number is entered correctly
+22,Enter patient email,Verify email is entered correctly
+23,Enter patient notes,Verify notes are entered correctly
+24,Save patient registration and initiate episode,Verify patient is saved and episode creation begins
+25,Login to QPathways TREND application,Verify user is logged in successfully
+26,Navigate to Patients tab in TREND,Verify Patients tab is accessible
+27,Open new patient registration form in TREND,Verify new patient form is displayed
+28,Enter patient first name in TREND,Verify first name is entered correctly
+29,Enter patient middle name in TREND,Verify middle name is entered correctly
+30,Enter patient last name in TREND,Verify last name is entered correctly
+31,Enter patient date of birth in TREND,Verify date of birth is entered correctly
+32,Enter patient gender in TREND,Verify gender is entered correctly
+33,Select trend program,Verify trend program is selected
+34,Select primary care provider from dropdown,Verify primary care provider is selected
+35,Select PGP from dropdown in TREND,Verify PGP is selected from dropdown
+36,Select provider from dropdown in TREND,Verify provider is selected from dropdown
+37,Select primary insurance from dropdown in TREND,Verify primary insurance is selected
+38,Enter primary insurance ID in TREND,Verify insurance ID is entered correctly
+39,Enter primary group ID in TREND,Verify group ID is entered correctly
+40,Select secondary insurance from dropdown in TREND,Verify secondary insurance is selected
+41,Enter secondary insurance ID in TREND,Verify secondary insurance ID is entered correctly
+42,Enter secondary group ID in TREND,Verify secondary group ID is entered correctly
+43,Enter patient address in TREND,Verify address is entered correctly
+44,Enter ZIP code and select suggestion in TREND,Verify ZIP suggestion is selected
+45,Enter mobile number in TREND,Verify mobile number is entered correctly
+46,Enter phone number in TREND,Verify phone number is entered correctly
+47,Enter patient email in TREND,Verify email is entered correctly
+48,Enter patient notes in TREND,Verify notes are entered correctly
+49,Save patient registration in TREND,Verify patient is saved successfully
+50,Login to QPathways Clinical application,Verify user is logged in successfully
+51,Navigate to Patients tab in Clinical,Verify Patients tab is accessible
+52,Open new patient registration form in Clinical,Verify new patient form is displayed
+53,Enter patient first name in Clinical,Verify first name is entered correctly
+54,Enter patient middle name in Clinical,Verify middle name is entered correctly
+55,Enter patient last name in Clinical,Verify last name is entered correctly
+56,Enter patient date of birth in Clinical,Verify date of birth is entered correctly
+57,Enter patient gender in Clinical,Verify gender is entered correctly
+58,Enter patient address in Clinical,Verify address is entered correctly
+59,Enter ZIP code and select suggestion in Clinical,Verify ZIP suggestion is selected
+60,Enter mobile number in Clinical,Verify mobile number is entered correctly
+61,Enter phone number in Clinical,Verify phone number is entered correctly
+62,Enter patient email in Clinical,Verify email is entered correctly
+63,Enter patient notes in Clinical,Verify notes are entered correctly
+64,Save patient registration in Clinical,Verify patient is saved successfully
+65,Login to QPathways 2WT application,Verify user is logged in successfully
+66,Navigate to Patients tab in 2WT,Verify Patients tab is accessible
+67,Open new patient registration form in 2WT,Verify new patient form is displayed
+68,Enter patient first name in 2WT,Verify first name is entered correctly
+69,Enter patient middle name in 2WT,Verify middle name is entered correctly
+70,Enter patient last name in 2WT,Verify last name is entered correctly
+71,Enter patient date of birth in 2WT,Verify date of birth is entered correctly
+72,Enter patient gender in 2WT,Verify gender is entered correctly
+73,Enter patient address in 2WT,Verify address is entered correctly
+74,Enter ZIP code and select suggestion in 2WT,Verify ZIP suggestion is selected
+75,Enter mobile number in 2WT,Verify mobile number is entered correctly
+76,Enter phone number in 2WT,Verify phone number is entered correctly
+77,Enter patient email in 2WT,Verify email is entered correctly
+78,Enter patient notes in 2WT,Verify notes are entered correctly
+79,Save patient registration in 2WT,Verify patient is saved successfully
+80,Login to QInsight application,Verify user is logged in successfully
+81,Navigate to dashboard in QInsight,Verify dashboard is accessible
+82,Search functionality in QInsight,Verify search results are shown
+83,View reports in QInsight,Verify reports are accessible
+84,Export data in QInsight,Verify data export is successful
+85,Filter data in QInsight,Verify filtered data is shown
+86,Login to QIntake application,Verify user is logged in successfully
+87,Navigate to dashboard in QIntake,Verify dashboard is accessible
+88,Search functionality in QIntake,Verify search results are shown
+89,View reports in QIntake,Verify reports are accessible
+90,Export data in QIntake,Verify data export is successful
+91,Filter data in QIntake,Verify filtered data is shown
+92,Login to Qonductor application,Verify user is logged in successfully
+93,Navigate to dashboard in Qonductor,Verify dashboard is accessible
+94,Search functionality in Qonductor,Verify search results are shown
+95,View reports in Qonductor,Verify reports are accessible
+96,Export data in Qonductor,Verify data export is successful
+97,Filter data in Qonductor,Verify filtered data is shown

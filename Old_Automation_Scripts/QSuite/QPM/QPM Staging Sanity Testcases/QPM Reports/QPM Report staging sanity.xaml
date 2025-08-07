@@ -1,0 +1,505 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="C_Appointment_report" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="843,640" sap2010:WorkflowViewState.IdRef="C_Appointment_report_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="C_Appointment_report" sap:VirtualizedContainerService.HintSize="512,427" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: QPM" sap:VirtualizedContainerService.HintSize="450,339" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="aed46641-27dd-447b-8362-190690cf4b2a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="QPM Reports sanity" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="d80e4e76-b592-421c-a49e-21e1a44d110a" InformativeScreenshot="a95c4132337103255c3ea531321db440.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Appointments'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="234, 128, 53, 12" CvTextArgument="Patients" CvType="Text" DesignTimeRectangle="166, 112, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Appointments' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Appointments' role='menu item' automationid='' check:fulltext='Appointments' /&gt;" Guid="dcaf85fa-51b5-40ea-865b-b59913e21ffd" InformativeScreenshot="a077a363de6e93e34ba56d38ede494f5.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'WindowsForms10.BUTTON.a…'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1482, 209, 24, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='pnlapptviewer' /&gt;&lt;wnd ctrlname='panel2' /&gt;&lt;wnd ctrlname='pnlSelectedColumns' /&gt;&lt;wnd ctrlname='btnBrwsSelectedColumns' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlapptviewer' /&gt;&lt;wnd ctrlname='panel2' /&gt;&lt;wnd ctrlname='pnlSelectedColumns' /&gt;&lt;wnd ctrlname='btnBrwsSelectedColumns' /&gt;" Guid="e3d7be84-2321-42d4-9c57-674e040afe04" InformativeScreenshot="87f5c4796c2612ed066b839ff0f31c1a.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Pharmacy Type'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+              <uix:NCheck.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="324, 388, 80, 22" DesignTimeScaleFactor="1" ElementType="CheckBox" FullSelectorArgument="&lt;wnd ctrlname='gloListControl' /&gt;&lt;wnd ctrlname='pnl_TOP' /&gt;&lt;wnd ctrlname='pnlSearch' /&gt;&lt;wnd ctrlname='chkSelectAll' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='gloListControl' /&gt;&lt;wnd ctrlname='pnl_TOP' /&gt;&lt;wnd ctrlname='pnlSearch' /&gt;&lt;wnd ctrlname='chkSelectAll' check:fulltext='Select All' /&gt;" Guid="ce0ca973-5ef4-4f34-9897-f7f867db57a3" InformativeScreenshot="883741376a0a3f030b1b102690839bea.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvElementArea="314, 386, 1292, 27" CvType="InputBox" DesignTimeRectangle="352, 388, 114, 22" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlname='gloListControl' /&gt;&lt;wnd ctrlname='pnl_TOP' /&gt;&lt;wnd ctrlname='pnlSearch' /&gt;&lt;wnd ctrlname='lblSpeciality' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='gloListControl' /&gt;&lt;wnd ctrlname='pnl_TOP' /&gt;&lt;wnd ctrlname='pnlSearch' /&gt;&lt;wnd ctrlname='lblSpeciality' check:text='Pharmacy Type :' /&gt;" Guid="36afc68d-9533-4b9c-9630-65d9f133ca22" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheck.Target>
+            </uix:NCheck>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save&amp;Cls'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="13, 364, 58, 13" CvTextArgument="Save&amp;Cls" CvType="Text" DesignTimeRectangle="10, 330, 66, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='gloListControl' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Save&amp;amp;Cls' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='gloListControl' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Save&amp;amp;Cls' role='push button' automationid='' check:fulltext='Save&amp;amp;Cls' /&gt;" Guid="7c5c171a-a35c-4356-adc0-61ba3c88b322" InformativeScreenshot="eeceb0e64ed006992ea08ecc11969373.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generate Report'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CvTextArea="13, 157, 106, 14" CvTextArgument="Generate Report" CvType="Text" DesignTimeRectangle="10, 122, 113, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Generate Report' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Generate Report' role='push button' automationid='' check:fulltext='Generate Report' /&gt;" Guid="9c0b2d3d-6e9d-4961-8e5d-13ee0ae8b8f6" InformativeScreenshot="a24128b87d897c49cf94dcafec9df4e7.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="450,189" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="216, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="42cf1126-3492-49ba-818a-9efdce5069d0" InformativeScreenshot="175d3683b1eda3b5b80ee079696f8cb6.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Appointment report generated successfully" />
+            <Sequence DisplayName="QPM Void Claim Report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="048f28bd-23af-46c4-9df3-3000055cdf53" InformativeScreenshot="2ae548927afbd73b8585963df15a5e6f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_4" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Void Claims'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="206, 279, 18, 17" CvTextArea="210, 269, 132, 10" CvTextArgument="1163 APT70" CvType="ArrowButton" DesignTimeRectangle="166, 266, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Void Claims' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Void Claims' role='menu item' automationid='' check:fulltext='Void Claims' /&gt;" Guid="df2c47e7-1e85-48a4-bc22-39cd5bca8c04" InformativeScreenshot="9c54f5f55761c978135b6046058878c1.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_5" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="219, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmRpt_VoidChargesAndPay' /&gt;&lt;wnd ctrlname='pnlContainer' /&gt;&lt;wnd ctrlname='gloReportViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmRpt_VoidChargesAndPay' /&gt;&lt;wnd ctrlname='pnlContainer' /&gt;&lt;wnd ctrlname='gloReportViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="22ae3079-6c4e-4122-a0c6-4da22f2a574c" InformativeScreenshot="1de39ebc1cbebaf03d130af7ed6d87a3.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_6" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,115" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Void claims report generated successfully" />
+            </Sequence>
+            <Sequence DisplayName="QPM Aging report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="237bc5b7-ee4d-4975-8906-53dbbfe9a534" InformativeScreenshot="338d3b6ad822a8b21fddc15aed945754.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MIS Reports'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="205, 102, 215, 15" CvTextArgument="Calendar Appointment Charges" CvType="Text" DesignTimeRectangle="166, 90, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' automationid='' check:fulltext='MIS Reports Legacy&amp;#xD;&amp;#xA;Financial Productivity Summary&amp;#xD;&amp;#xA;Aging&amp;#xD;&amp;#xA;CPT Analysis&amp;#xD;&amp;#xA;Missed Opportunities' /&gt;" Guid="15fd2054-946e-4e75-b3ea-344e3d105cdf" InformativeScreenshot="852222266ce5b0b991287d540485700f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Aging'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="432, 114, 240, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Aging' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Aging' role='menu item' automationid='' check:fulltext='Aging' /&gt;" Guid="1f4efc87-2540-4a96-aba9-c1fbba00706d" InformativeScreenshot="ee0418c7ca38681880fb06ea6eaeb203.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="803, 188, 15, 20" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Group By:' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Group By:' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Group By:' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Group By:' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' automationid='' check:text='Open' /&gt;" Guid="756aa67f-c2c6-4915-b118-381939d3eab9" InformativeScreenshot="b9c5c8d2481070d7b79f539e13a885ca.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Provider'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="2, 44, 46, 12" CvTextArgument="Provider" CvType="Text" DesignTimeRectangle="1, 43, 122, 14" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;ctrl name='Group By:' role='list' /&gt;&lt;ctrl name='Provider' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Group By:' role='list' /&gt;&lt;ctrl name='Provider' role='list item' automationid='' check:text='Provider' /&gt;" Guid="208d9223-bc6b-404f-9a6a-6d64811d29ff" InformativeScreenshot="0d7326b9b50fee435e90da3983040d10.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View Report'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="1513, 185, 85, 24" CvTextArea="1519, 191, 71, 14" CvTextArgument="View Report" CvType="Button" DesignTimeRectangle="1513, 185, 85, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' check:text='View Report' /&gt;" Guid="23e5aa6d-e8c4-491c-b46e-7c739cdd3b2e" InformativeScreenshot="f1e66ddad43687f206e1c29b1c5e18e2.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;&lt;wnd ctrlname='frmSSRSViewer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="51, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="bf1849fb-912f-4e5c-9920-91c08d7ec958" InformativeScreenshot="5a63b9c7fabd4415a43f01772c89fe9c.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="Aging report generated successfully" />
+            </Sequence>
+            <Sequence DisplayName="QPM Batch Print Template" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="1378c20e-2d0d-41b9-874d-0020b99e0607" InformativeScreenshot="2ae548927afbd73b8585963df15a5e6f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Batch Print Templates'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="210, 250, 131, 12" CvTextArgument="10586 Elaine" CvType="Text" DesignTimeRectangle="166, 244, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Batch Print Templates' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Batch Print Templates' role='menu item' automationid='' check:fulltext='Batch Print Templates' /&gt;" Guid="8a5c8010-94bb-4657-a596-f159ba61a5f5" InformativeScreenshot="113085dbbfcfcf797864975d029fc564.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Generate Batch'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="13, 157, 96, 13" CvTextArgument="Generate Batch" CvType="Text" DesignTimeRectangle="10, 122, 105, 51" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmBatchPrinting' /&gt;&lt;wnd ctrlname='pnl_tlspTOP' /&gt;&lt;wnd ctrlname='tls_OverDue' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Generate Batch' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmBatchPrinting' /&gt;&lt;wnd ctrlname='pnl_tlspTOP' /&gt;&lt;wnd ctrlname='tls_OverDue' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Generate Batch' role='push button' automationid='' check:fulltext='Generate Batch' /&gt;" Guid="f6b0b4b4-6bd7-47e0-ab47-8ec00a1d6896" InformativeScreenshot="37331912b17a0085a2b883c0b2104b5f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_34" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="156, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmBatchPrinting' /&gt;&lt;wnd ctrlname='pnl_tlspTOP' /&gt;&lt;wnd ctrlname='tls_OverDue' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmBatchPrinting' /&gt;&lt;wnd ctrlname='pnl_tlspTOP' /&gt;&lt;wnd ctrlname='tls_OverDue' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="9d91c7b6-c383-4db4-9958-b35fba868881" InformativeScreenshot="2e722f9f9703d9d1cb204ec09102c894.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="Batch print template generated successfully" />
+            </Sequence>
+            <Sequence DisplayName="QPM Cached Financial productivity report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_35" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="691a58d0-d0c4-4cd7-b44e-de3e466f9c54" InformativeScreenshot="2ae548927afbd73b8585963df15a5e6f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MIS Reports'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_36" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="166, 62, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' automationid='' check:fulltext='MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method&amp;#xD;' /&gt;" Guid="2c6b8be2-1f92-4f2e-933e-a950f750d6d0" InformativeScreenshot="7f6323d9cc3e38705d8c2d5e48b42583.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_7" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cached-Financial Produc…'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="432, 428, 350, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' /&gt;&lt;ctrl name='Cached-Financial Productivity Summary' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' /&gt;&lt;ctrl name='Cached-Financial Productivity Summary' role='menu item' automationid='' check:fulltext='Cached-Financial Productivity Summary' /&gt;" Guid="b1ce772a-dc22-4eb7-9d14-8df288a45efb" InformativeScreenshot="0420056966e17422592e36b103c68bf5.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_38" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="318, 238, 15, 20" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Group By:' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Group By:' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Group By:' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Group By:' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' automationid='' check:text='Open' /&gt;" Guid="f000612e-f5f1-48a8-8a55-1bc286228456" InformativeScreenshot="1f6342111d44e39dc73ce80993b496af.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Provider'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_39" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="2, 43, 47, 13" CvTextArgument="Provider" CvType="Text" DesignTimeRectangle="1, 43, 163, 14" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;ctrl name='Group By:' role='list' /&gt;&lt;ctrl name='Provider' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Group By:' role='list' /&gt;&lt;ctrl name='Provider' role='list item' automationid='' check:text='Provider' /&gt;" Guid="eadc4a5d-9fc8-4248-b63c-d9d8dcc17eb5" InformativeScreenshot="04e4915799b47a5fed65ca9557682fec.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View Report'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_40" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="1512, 210, 86, 24" CvTextArea="1520, 217, 70, 14" CvTextArgument="View Report" CvType="Button" DesignTimeRectangle="1513, 211, 85, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' check:text='View Report' /&gt;" Guid="004c014c-ac4f-4b74-b791-eeefaddbf759" InformativeScreenshot="3d60eaf8441fbfe7f7fd873c94de3124.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;&lt;wnd ctrlname='frmSSRSViewer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,180" sap2010:WorkflowViewState.IdRef="NClick_41" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="142, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="476a6eb9-939b-439b-a4fe-26b3b47416b0" InformativeScreenshot="9cddb5c4effc34d06b344463f13de0a4.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="QPM Financial Productivity report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="b34c14dd-3022-4fb8-9ea2-2b8eed6e0805" InformativeScreenshot="2ae548927afbd73b8585963df15a5e6f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MIS Reports'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_43" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="205, 102, 215, 15" CvTextArgument="Calendar Appointment Charges" CvType="Text" DesignTimeRectangle="166, 90, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' automationid='' check:fulltext='MIS Reports Legacy&amp;#xD;&amp;#xA;Financial Productivity Summary&amp;#xD;&amp;#xA;Aging&amp;#xD;&amp;#xA;CPT Analysis&amp;#xD;&amp;#xA;Missed Opportunities' /&gt;" Guid="d8231528-2295-4372-9644-053f18b4447d" InformativeScreenshot="852222266ce5b0b991287d540485700f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Financial Productivity'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_44" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="429, 103, 222, 12" CvTextArgument="Patient Payment Batch Insurance" CvType="Text" DesignTimeRectangle="432, 92, 240, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Financial Productivity Summary' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Financial Productivity Summary' role='menu item' automationid='' check:fulltext='Financial Productivity Summary' /&gt;" Guid="65925e57-6c8d-4178-b304-ae7464deaee6" InformativeScreenshot="a7eca0f91e0bbb629eac1028a1f89816.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_45" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="329, 203, 75, 23" CvTextArea="358, 209, 17, 11" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="329, 203, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='2' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='OK' check:text='OK' /&gt;" Guid="dafcba14-4299-4f10-a3fa-c8ac42c2c41f" InformativeScreenshot="fddeceb3ed3d5578de84a782d09d4b13.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' cls='#32770' title='gloPM' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="318, 212, 15, 20" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Group By:' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Group By:' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Group By:' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Group By:' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' automationid='' check:text='Open' /&gt;" Guid="702702be-2da2-47b4-8369-2bcf9f72d174" InformativeScreenshot="03e1c1e993c237bb1fe17a0985adb05f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Provider'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="2, 43, 47, 13" CvTextArgument="Provider" CvType="Text" DesignTimeRectangle="1, 43, 163, 14" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;ctrl name='Group By:' role='list' /&gt;&lt;ctrl name='Provider' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Group By:' role='list' /&gt;&lt;ctrl name='Provider' role='list item' automationid='' check:text='Provider' /&gt;" Guid="4e3661af-e159-4056-a7e3-e60611d8b12e" InformativeScreenshot="b556f1f884b8afc62707dd551a28659a.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View Report'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_48" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvElementArea="1513, 185, 85, 24" CvTextArea="1519, 191, 71, 14" CvTextArgument="View Report" CvType="Button" DesignTimeRectangle="1513, 185, 85, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' check:text='View Report' /&gt;" Guid="77186296-b998-46e0-8e9c-6ebe97ccc5fd" InformativeScreenshot="f1e66ddad43687f206e1c29b1c5e18e2.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;&lt;wnd ctrlname='frmSSRSViewer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,180" sap2010:WorkflowViewState.IdRef="NClick_49" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="51, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="8fe6799b-4758-42f8-b79f-693824065b94" InformativeScreenshot="ac114d0d83ea75508f600bd2d660f68c.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="QPM Cancel Appointment" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_50" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="ca024c35-928e-417c-ac01-889c9b0872b9" InformativeScreenshot="2ae548927afbd73b8585963df15a5e6f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cancel Appointments'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="213, 154, 84, 12" CvTextArgument="Search : 0315" CvType="Text" DesignTimeRectangle="166, 156, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Cancel Appointments' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='Cancel Appointments' role='menu item' automationid='' check:fulltext='Cancel Appointments' /&gt;" Guid="7867a4ca-d269-4b6e-b4cf-d1905796921a" InformativeScreenshot="830d723a634fe405d2946027dc67dc71.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_52" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="216, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmRPT_AppointmentView' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='ts_Commands' /&gt;&lt;ctrl name='ToolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="61a4a05b-8274-4e1e-8baf-c4e3232449e6" InformativeScreenshot="115993052aecc84649b28ec2835ddbd5.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Cancel appointment report generated successfully" />
+            </Sequence>
+            <Sequence DisplayName="QPM Missed Opportunities report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_53" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="3a9eb84d-0ff5-475c-a475-975d6afd89c9" InformativeScreenshot="c9e4ff0d68956d20b4507f33a203a68e.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MIS Reports'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_54" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="205, 102, 215, 15" CvTextArgument="Calendar Appointment Charges" CvType="Text" DesignTimeRectangle="166, 90, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' automationid='' check:fulltext='MIS Reports Legacy&amp;#xD;&amp;#xA;Financial Productivity Summary&amp;#xD;&amp;#xA;Aging&amp;#xD;&amp;#xA;CPT Analysis&amp;#xD;&amp;#xA;Missed Opportunities' /&gt;" Guid="ba69c574-284d-4e8f-aa37-e630c8a5c647" InformativeScreenshot="852222266ce5b0b991287d540485700f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Missed Opportunities'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_55" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="432, 158, 240, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Missed Opportunities Report' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Missed Opportunities Report' role='menu item' automationid='' check:fulltext='Missed Opportunities Report' /&gt;" Guid="854d1701-a9fd-45e3-ba37-4bea2d52347d" InformativeScreenshot="5537bceb5ef4c665691c50480d2e3a36.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_56" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="566, 264, 15, 20" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Sort By :' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Sort By :' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='promptPanel' /&gt;&lt;wnd aaname='Sort By :' cls='WindowsForms10.COMBOBOX.*' /&gt;&lt;ctrl name='Sort By :' role='combo box' /&gt;&lt;ctrl name='Open' role='push button' automationid='' check:text='Open' /&gt;" Guid="2ebd0136-8606-4586-9103-92bc5069387e" InformativeScreenshot="29d64bd3ea69c46ba82ea7038df999b3.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start Time'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_57" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="1, 16, 60, 12" CvTextArgument="Start Time" CvType="Text" DesignTimeRectangle="1, 15, 122, 14" DesignTimeScaleFactor="1" ElementType="ListItem" FullSelectorArgument="&lt;ctrl name='Sort By :' role='list' /&gt;&lt;ctrl name='Start Time' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Sort By :' role='list' /&gt;&lt;ctrl name='Start Time' role='list item' automationid='' check:text='Start Time' /&gt;" Guid="55d355a1-ed1e-4511-8a3b-8c45d5819fcf" InformativeScreenshot="37039fd491f15c1c7b9ec511f4a9d4cc.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View Report'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_58" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="1519, 191, 71, 14" CvTextArgument="View Report" CvType="Text" DesignTimeRectangle="1513, 185, 85, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlPaymentDetails' /&gt;&lt;wnd ctrlname='SSRSViewer' /&gt;&lt;wnd ctrlname='paramsSplitContainer' /&gt;&lt;wnd ctrlname='tableLayoutPanel1' /&gt;&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='rsParams' /&gt;&lt;wnd ctrlname='buttonPanel' /&gt;&lt;wnd ctrlname='viewReport' check:text='View Report' /&gt;" Guid="a5c924b5-f4c6-4fcc-a958-1bcd06a0f47e" InformativeScreenshot="0ae74fdbdfa5bd6d7b6509969133682c.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;&lt;wnd ctrlname='frmSSRSViewer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_8" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,180" sap2010:WorkflowViewState.IdRef="NClick_59" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="51, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="b8a727b3-bd56-43f5-96f7-e3d1a7e00ee5" InformativeScreenshot="944ef0223455c2dcc752e62582b79e62.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+            <Sequence DisplayName="QPM Monthly charges report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_66" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="437d6ac9-b8c5-4a8f-8bd1-16f15f7242f8" InformativeScreenshot="dcb640c6016938518f8bfbafd9f80f39.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MIS Reports'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_67" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="205, 102, 215, 15" CvTextArgument="Calendar Appointment Charges" CvType="Text" DesignTimeRectangle="166, 90, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' automationid='' check:fulltext='MIS Reports Legacy&amp;#xD;&amp;#xA;Financial Productivity Summary&amp;#xD;&amp;#xA;Aging&amp;#xD;&amp;#xA;CPT Analysis&amp;#xD;&amp;#xA;Missed Opportunities' /&gt;" Guid="66e7b467-55dc-4ac1-8bc1-dddadece8811" InformativeScreenshot="852222266ce5b0b991287d540485700f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Monthly charges'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_68" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="586, 179, 92, 12" CvTextArgument="Preferred Name" CvType="Text" DesignTimeRectangle="432, 180, 240, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Monthly charges' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports Legacy' role='menu item' /&gt;&lt;ctrl name='Monthly charges' role='menu item' automationid='' check:fulltext='Monthly charges' /&gt;" Guid="ea666413-2f83-4d4e-ab0c-26aa697fbc5a" InformativeScreenshot="e195e218381deefd34200853fa0b4847.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,122" sap2010:WorkflowViewState.IdRef="Delay_10" />
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_69" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="51, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="61241711-b4e3-4553-bd2e-97b4dbc8797e" InformativeScreenshot="712a6a99fa8947badbec61c8257bc9bc.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Monthly charges report generated successfully" />
+            </Sequence>
+            <Sequence DisplayName="QPM Daily payment report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports MIS'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_70" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable CvTextArea="174, 38, 44, 13" CvTextArgument="Reports" CvType="Text" DesignTimeRectangle="166, 33, 61, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' automationid='' check:fulltext='Reports&amp;#xD;&amp;#xA;MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method' /&gt;" Guid="f8a5e8f9-3fa5-4e12-881d-2ec4a8a1e6e2" InformativeScreenshot="454469d3cbdc8f7bdcb70275e5b8ff44.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'MIS Reports'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_71" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="166, 62, 266, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' automationid='' check:fulltext='MIS Reports&amp;#xD;&amp;#xA;Productivity&amp;#xD;&amp;#xA;Productivity By RVU&amp;#xD;&amp;#xA;Productivity By Provider by Payment Method&amp;#xD;' /&gt;" Guid="03051cb6-a155-44ab-a43b-5aa5231eabd8" InformativeScreenshot="5523ae96ed281f47d29b72a081619497.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Daily Payments'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_72" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="432, 274, 350, 22" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='panel1' idx='2' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' /&gt;&lt;ctrl name='Daily Payments' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='panel1' /&gt;&lt;wnd ctrlname='mnuMainMenu' /&gt;&lt;ctrl name='menuStrip1' role='menu bar' /&gt;&lt;ctrl name='Reports' role='menu item' /&gt;&lt;ctrl name='MIS Reports' role='menu item' /&gt;&lt;ctrl name='Daily Payments' role='menu item' automationid='' check:fulltext='Daily Payments' /&gt;" Guid="d99ed07b-2a20-49be-bf87-0428481b53f2" InformativeScreenshot="c02e21b56689a5a010910f3c8553a29b.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="388,189" sap2010:WorkflowViewState.IdRef="NClick_73" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="aed46641-27dd-447b-8362-190690cf4b2a" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="51, 122, 43, 50" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='frmSSRSViewer' /&gt;&lt;wnd ctrlname='pnlToolStrip' /&gt;&lt;wnd ctrlname='tls_Top' /&gt;&lt;ctrl name='toolStrip1' role='tool bar' /&gt;&lt;ctrl name='Close' role='push button' automationid='' check:fulltext='Close' /&gt;" Guid="d4f0ce6a-16bd-4b66-b79d-84f0aca6f666" InformativeScreenshot="aea8eef75e7c1a14140164b7bcdd164f.png" ScopeSelectorArgument="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="Daily payment report generated successfully" />
+            </Sequence>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,110" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;QPM Reports Sanity Done&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Program Files (x86)\gloPM\glopm.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAf3SURBVFhHvZd5VFXXFcaPGBlkeo8Hj9FYRUVFDIoVjVQREyrggKI4ERBQQAWcCC7XIjRWRRMxlks0iQ9FjHMdK4pDVECZFQdAEEUEFC2llTQOSLBf9z33AQ94Jv803Wv91r1nn733t+85576BaZrF3LOzbKIepdpG1/ztt8AmqiZNueDiXLVch5m4xZnYrf5HsW10LSjwF6EGYRX5CJbLpKs41hb3bmpht6qhROaZZKaWZ8xudeM17cEdUPewWEpiJDhvxzPEHmpEWEoDHGLrYB5VD+uoX29eE2riBheX++x0t11epzWoDVFcsaQaW848h2j1z1uwK+tHbDnbhP3nynF4zQyMW54JZdQTrflaIU3FrGNezDLo6npbsXsS0YZNZA3MIqpxqfQlFw/f3QDT8GpYLHkEJa2I+dJaDI4uQfnaoQhfsQMWkfVa62jDOrwskVmFXE+2EffyHVjQk392tJGLT02shzk10zXGalkN7CPL0LRGgY+iMmAZWdstRhvWYWUpTBlUJFgveQjriKpuWBFmi6vQ3PIfHMn7N2ShD7TGiSgiavH58jgUrhgDecQTrTGdIE3LRaUqZvFJgWAVTmJaUC5+gEl/ruNPPznhMSxorC1ORBn+EKMjMtG6sjccw4v4WFucJsrgOypmPj9fsAy9D8uQ7igWViJQeMIbsAm7D2VIZfeYEFqlEDoTIQ9gE1qOlpXG8A07CHPyd43tBGkqA2+rmGJOrqBceA/aUARWYFpCrdTAokpYBFV0mpcHViFw+df4YmU0bINKMDCkEC2rjDEt9AAUQSSgEasNxYKbKiafdU0w/6QcCm0E3IXVwnLewOR11ZAvuNs+ZxZQAZewc3i7neHlnwwhRCzBvMU7qQEjDAzMo/kutbogaprNvaFishnZgmJ+Gd6F0ewSHMtpwsn8H2HgV9LuN5tXBvugXLwQeqH5cwOsDF2P/BWjkR3lBsN5tDUaNd6FfHaRiplOzxLM5pTgXcj978AmoAxvWt7Cb0M1DGfeJp80Z+pfisEBmZgQdARbl0WgeY0xfr/gDGTk71pHG7KZBSpmMuWKIJ9FRX8Bk5m3MCCkFFVPm7F6Zx0MfEthMKMcejPuYeT80zgb44FXccZ48akZNoVGQ39mhdY6XTGdnqdixl6XBNmMm+iK8fRiiWnqK6HvXYyA+Gs4Fj8RxRsd0LhZhqaNJkiL9oX9rEvYHLwM+NQQ8cExMPS9AxPKMfUt7la7DdMpOdSA5wXBZOp1GE9powhGdJ24uhzeayvgG18Jr7X3MDT4DnQ9C6H7xyLo+dyGnvcdGE29AZ3JJXCNvg8Lv5vkvwUf/53wm5sMQ5/rcA4rgX3ALapXpFFfQtQ08spWsd4eGYKxdwHaMPIqgMHkPH7yu9rPrW8RnfwQbFQWjH2kWDbuKp+L2voAbEIuensVobf3dbAPMrl/z6l6MLdr7fU7aXleoQYmnBYMPXPQRu+Pc6A/SSoqWsrhx9h78imanr9Re4BVSSQ2Lhs93bMxJuIm992vegnmfImK5qDnxGw6nEXc/7DqFZjL5fb6mhh4XFQxPbcTgoFHJg0k9CdmQtf9Mk8WjTmcowIXwfqcRmp6Pfc1NrwBcyL/6IuI3V7JfaKxUT9Aj3LZqItIPFij9pJ/YAavq6nDGX9WxXqNOSzojb8AvfHnObp/OI/33M6rU4EezufIR2KuGRgRlMN9ra9bwQadAhuWjvRrz7hPtPB1JSR+Bqz/Sbx4/bPaC9hPyQYbm9GuIUGaH55SsZ6j9gm9PjyDXmMl3hubDp0x6epU6r7vUTDHE2DKA0jc/4D77pb/RCtzDKzfUbxu7hC6Ufqc+2STMtQeyYLjbtGZONmuwRE1XY9SAyNSBR3XE9BxPS4x+jg9xTF1KpCgqsCGXeUoLPuX2gNMD6fD53QEbPAhPhY/pJ4+e8XvmfJ7xCaV8PvqGulHTNqJGoo92KHBIU2XAyqmM1wl6Lgcgc5IiR4jD4ONkAprs+h4Wma7NFr+g/Spd4H78gv/iRWJxfx+7IIfUFrVxO/7uksrUfeYDmKf1HYNjqjpvFfFejjuEHqM2I8eI/ZxmDPh9D1PFM07JAt+kVfh4kfnQLEbbMBuapJiBqQiZusNHvN1Kr0VTmn8Pud6A79WV5Mo28rvRWPmKbx2mw7XdNqlYmyIILDh9ERUQGIP7XmqOo0SrSnRXkVLSOJOqR1xtt8iPUv6qp6zPAdMfxueNUrbINqiWNomoyQ8qv+Jj/tOojMzjGq35Yuajt9RA4O/EpgTiTiRiMgwYqiKJ4nG+u2iwJ00p8FwipFvo59qrTzG3PUQbUsylm7I5WPRmDnF2QpIOy29pgEx9CYMEfPVOqLm0O0pjA36UmCO35KImqHf0NN+w5NEY7/7jhJ3dMyLiOP+yeoIijHYSnnkez+JjzOz/06HMZHeIAGL47O4b+9x2qaB2zvXGfwXWgH7uDg2JJmKCh04JCHjci1y8xuoAZpz2EbBSRJDCPuv0M9zD/IKGrCd3hJm9QU1QHmKjbiS/wTuc9Jp5aiBAdtgPT6Fxwmqcj7upDNocwL9IfT/gNlvoaJURJM+GyX6b+4+J9KP/OL8+wmd/XY07rvp1+Psv6TGF47h/46YzboDzOozcsT9nyAtm/UnJXHRdB10mDJ2H1Oupr1b9RsjasT+lek791Sra5iRuyOTzY5h8jkJTO6/6X9MApP5xzIjj+FqNTLG/gvJefrqNmlIPAAAAABJRU5ErkJggg==" InformativeScreenshot="cb51df2c4788d9999afe4b81667eaa0d.png" Selector="&lt;wnd app='glopm.exe' ctrlname='frmDashBoardMain' /&gt;" Title="QPM" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

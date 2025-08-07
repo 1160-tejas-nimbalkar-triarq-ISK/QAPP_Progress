@@ -1,0 +1,403 @@
+# Ambient API Performance Testing Framework Configuration
+# Configuration for Ambient API Performance Testing
+
+# Common Headers Configuration (Centralized Project-wide Headers)
+common_headers:
+  # Basic headers without authentication (Ambient APIs don't require auth)
+  basic_no_auth:
+    Content-Type: "application/json"
+    Accept: "application/json"
+  
+  # Ambient headers for QA environment
+  ambient_qa:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-Environment: "qa"
+  
+  # Ambient headers for Dev environment
+  ambient_dev:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-Environment: "dev"
+  
+  # Ambient headers for Staging environment
+  ambient_staging:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-Environment: "staging"
+  
+  # Ambient headers for Production environment
+  ambient_production:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-Environment: "production"
+  
+  # Ambient V1 headers for QA environment
+  ambient_v1_qa:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-API-Version: "v1"
+    X-Environment: "qa"
+  
+  # Ambient V1 headers for Dev environment
+  ambient_v1_dev:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-API-Version: "v1"
+    X-Environment: "dev"
+  
+  # Ambient V1 headers for Staging environment
+  ambient_v1_staging:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-API-Version: "v1"
+    X-Environment: "staging"
+  
+  # Ambient V1 headers for Production environment
+  ambient_v1_production:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Performance-Testing-Framework/1.0"
+    Accept: "application/json"
+    X-API-Version: "v1"
+    X-Environment: "production"
+  
+  # Medical conversation processing headers with environment tracking
+  ambient_medical_qa:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Medical-Framework/1.0"
+    Accept: "application/json"
+    X-Processing-Type: "medical-conversation"
+    X-Environment: "qa"
+  
+  ambient_medical_dev:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Medical-Framework/1.0"
+    Accept: "application/json"
+    X-Processing-Type: "medical-conversation"
+    X-Environment: "dev"
+  
+  ambient_medical_staging:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Medical-Framework/1.0"
+    Accept: "application/json"
+    X-Processing-Type: "medical-conversation"
+    X-Environment: "staging"
+  
+  ambient_medical_production:
+    Content-Type: "application/json"
+    User-Agent: "Ambient-Medical-Framework/1.0"
+    Accept: "application/json"
+    X-Processing-Type: "medical-conversation"
+    X-Environment: "production"
+
+# Environment Settings
+environments:
+  dev:
+    base_url: "https://innovationz-dev.myqone.com"
+    timeout: 30
+    verify_ssl: true
+    description: "Dev Environment for testing"
+  
+  qa:
+    base_url: "https://innovationz-qa.myqone.com"
+    timeout: 30
+    verify_ssl: true
+    description: "QA Environment for testing"
+  
+  staging:
+    base_url: "https://innovationz-staging.myqone.com"
+    timeout: 30
+    verify_ssl: true
+    description: "Staging Environment for pre-production testing"
+  
+  production:
+    base_url: "https://innovationz.myqone.com"
+    timeout: 30
+    verify_ssl: true
+    description: "Production Environment - use with caution"
+
+# Load Configuration Templates (Reusable across endpoints)
+load_configurations:
+  light_load:
+    users: 20
+    spawn_rate: 5
+    duration: "90s"
+    description: "Light load testing - baseline performance validation"
+    expected_rps: 1.0
+    max_response_time: 20000
+    max_error_rate: 5.0
+  
+  medium_load:
+    users: 30
+    spawn_rate: 5
+    duration: "90s"
+    description: "Medium load testing - moderate stress testing"
+    expected_rps: 0.8
+    max_response_time: 25000
+    max_error_rate: 8.0
+  
+  heavy_load:
+    users: 40
+    spawn_rate: 8
+    duration: "120s"
+    description: "Heavy load testing - stress testing"
+    expected_rps: 0.6
+    max_response_time: 35000
+    max_error_rate: 10.0
+  
+  extreme_stress:
+    users: 50
+    spawn_rate: 10
+    duration: "180s"
+    description: "Extreme stress testing - pushing system to limits"
+    expected_rps: 0.5
+    max_response_time: 40000
+    max_error_rate: 15.0
+  
+  endurance_test:
+    users: 25
+    spawn_rate: 3
+    duration: "600s"
+    description: "Endurance testing - extended duration stability test"
+    expected_rps: 0.7
+    max_response_time: 30000
+    max_error_rate: 8.0
+  
+  spike_test:
+    users: 35
+    spawn_rate: 10
+    duration: "180s"
+    description: "Spike testing - rapid load increase testing"
+    expected_rps: 0.9
+    max_response_time: 28000
+    max_error_rate: 12.0
+
+# API Configuration - Complete API definitions with method, endpoint, headers, and payload
+api_configurations:
+  original:
+    name: "Original Ambient API"
+    description: "Legacy ambient API endpoint for generating summary HTML"
+    method: "POST"
+    endpoint: "/Ambient/generate_summary_html"
+    # Reference to common headers (will be environment-specific at runtime)
+    headers_template: "ambient_qa"
+    # Override or add specific headers if needed
+    custom_headers: {}
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 1
+    payload:
+      conversation: |
+        Dave. I've heard your knee is hurting you. Yes, my right knee. Okay. 
+        And you had no injuries, correct? No, it's just I believe it's being 
+        caused by the fact that my wife and I walk typically three to four 
+        times a week, and we walk anywhere from three to four miles during 
+        the exercise. Got it. So let me just take a look at your knee. I see 
+        there's a little bit of redness over the kneecap. And let me check 
+        the stability. The knee stability looks good. I don't see any lateral 
+        movement. I don't see any anterior or posterior movement. It looks 
+        like you have very good range of motion. You had full range of 
+        motion. I think what you have is a little bit of patellar tendonitis. 
+        And this is from the walking and the exercise. What I suggest is that 
+        you use some topical ibuprofen. Rub it on there twice a day. And I 
+        think we should have you cut back a little bit on your walking and 
+        maybe substitute swimming. Swimming would be a very good exercise 
+        that could work your muscles but wouldn't stress the knee. And let's 
+        have you come back in about a month, and we'll see how you're doing.
+      enhanced_processing: false
+  
+  v1:
+    name: "Ambient API V1"
+    description: "Version 1 of ambient API with enhanced processing capabilities"
+    method: "POST"
+    endpoint: "/Ambient/generate_summary_html_v1"
+    # Reference to V1 headers (will be environment-specific at runtime)
+    headers_template: "ambient_v1_qa"
+    # Override or add specific headers if needed
+    custom_headers: {}
+    timeout: 35
+    retry_attempts: 3
+    retry_delay: 1
+    payload:
+      conversation: |
+        Dave. I've heard your knee is hurting you. Yes, my right knee. Okay. 
+        And you had no injuries, correct? No, it's just I believe it's being 
+        caused by the fact that my wife and I walk typically three to four 
+        times a week, and we walk anywhere from three to four miles during 
+        the exercise. Got it. So let me just take a look at your knee. I see 
+        there's a little bit of redness over the kneecap. And let me check 
+        the stability. The knee stability looks good. I don't see any lateral 
+        movement. I don't see any anterior or posterior movement. It looks 
+        like you have very good range of motion. You had full range of 
+        motion. I think what you have is a little bit of patellar tendonitis. 
+        And this is from the walking and the exercise. What I suggest is that 
+        you use some topical ibuprofen. Rub it on there twice a day. And I 
+        think we should have you cut back a little bit on your walking and 
+        maybe substitute swimming. Swimming would be a very good exercise 
+        that could work your muscles but wouldn't stress the knee. And let's 
+        have you come back in about a month, and we'll see how you're doing.
+      enhanced_processing: true
+
+# Legacy API Endpoints Configuration (Backward Compatibility)
+api_endpoints:
+  original:
+    path: "/Ambient/generate_summary_html"
+    name: "Original Ambient API"
+    description: "Legacy ambient API endpoint"
+  
+  v1:
+    path: "/Ambient/generate_summary_html_v1"
+    name: "Ambient API V1"
+    description: "Version 1 of ambient API with improvements"
+
+# Test Combinations (Load Config + Endpoint combinations)
+load_tests:
+  # Original API tests
+  light_load:
+    load_config: "light_load"
+    endpoint: "original"
+    description: "Light load testing - baseline performance validation (original API)"
+  
+  medium_load:
+    load_config: "medium_load"
+    endpoint: "original"
+    description: "Medium load testing - moderate stress testing (original API)"
+  
+  heavy_load:
+    load_config: "heavy_load"
+    endpoint: "original"
+    description: "Heavy load testing - stress testing (original API)"
+  
+  # V1 API tests
+  light_load_v1:
+    load_config: "light_load"
+    endpoint: "v1"
+    description: "Light load testing - baseline performance validation (V1 API)"
+  
+  medium_load_v1:
+    load_config: "medium_load"
+    endpoint: "v1"
+    description: "Medium load testing - moderate stress testing (V1 API)"
+  
+  heavy_load_v1:
+    load_config: "heavy_load"
+    endpoint: "v1"
+    description: "Heavy load testing - stress testing (V1 API)"
+  
+  # Special test scenarios
+  stress_test:
+    load_config: "stress_test"
+    endpoint: "original"
+    description: "Stress testing - push system to limits (original API)"
+  
+  stress_test_v1:
+    load_config: "extreme_stress"
+    endpoint: "v1"
+    description: "Extreme stress testing - push V1 API to limits"
+  
+  endurance_test:
+    load_config: "endurance_test"
+    endpoint: "original"
+    description: "Endurance testing - extended duration stability test (original API)"
+  
+  endurance_test_v1:
+    load_config: "endurance_test"
+    endpoint: "v1"
+    description: "Endurance testing - extended duration stability test (V1 API)"
+  
+  spike_test:
+    load_config: "spike_test"
+    endpoint: "v1"
+    description: "Spike testing - rapid load increase testing (V1 API)"
+
+# Performance Thresholds and SLA Definitions
+thresholds:
+  response_time:
+    excellent: 2000      # ms - Best case performance
+    good: 5000          # ms - Acceptable performance
+    acceptable: 10000   # ms - Warning threshold
+    critical: 20000     # ms - Critical threshold
+    timeout: 30000      # ms - Request timeout
+  
+  error_rate:
+    excellent: 0.5      # % - Best case error rate
+    good: 2.0          # % - Acceptable error rate
+    acceptable: 5.0    # % - Warning threshold
+    critical: 10.0     # % - Critical threshold
+  
+  throughput:
+    minimum_rps: 0.5   # Minimum requests per second
+    target_rps: 1.0    # Target requests per second
+    optimal_rps: 2.0   # Optimal requests per second
+
+# Test Data for Various Test Scenarios
+test_data:
+  # Standard conversation for testing
+  medical_conversation: |
+    Dave. I've heard your knee is hurting you. Yes, my right knee. Okay. 
+    And you had no injuries, correct? No, it's just I believe it's being 
+    caused by the fact that my wife and I walk typically three to four 
+    times a week, and we walk anywhere from three to four miles during 
+    the exercise. Got it. So let me just take a look at your knee. I see 
+    there's a little bit of redness over the kneecap. And let me check 
+    the stability. The knee stability looks good. I don't see any lateral 
+    movement. I don't see any anterior or posterior movement. It looks 
+    like you have very good range of motion. You had full range of 
+    motion. I think what you have is a little bit of patellar tendonitis. 
+    And this is from the walking and the exercise. What I suggest is that 
+    you use some topical ibuprofen. Rub it on there twice a day. And I 
+    think we should have you cut back a little bit on your walking and 
+    maybe substitute swimming. Swimming would be a very good exercise 
+    that could work your muscles but wouldn't stress the knee. And let's 
+    have you come back in about a month, and we'll see how you're doing.
+
+  # Alternative conversations for load testing variety
+  alternative_conversations:
+    - |
+      Good morning, Sarah. I understand you've been experiencing headaches lately. 
+      Can you tell me more about them? They started about two weeks ago, and they're 
+      usually in the morning when I wake up. Are they severe? On a scale of 1-10, 
+      I'd say about a 6 or 7. Do you take any medications regularly? Just my blood 
+      pressure medication. Let me check your blood pressure and examine you. Your 
+      blood pressure is slightly elevated today. I think we should adjust your 
+      medication and monitor it closely. I'll also recommend some stress reduction 
+      techniques. Please come back in two weeks for a follow-up.
+    
+    - |
+      Hello, Michael. I see you're here for your diabetes follow-up. How have your 
+      blood sugar levels been? They've been pretty good, mostly between 120-140. 
+      That's excellent progress. Are you still following the diet plan? Yes, and 
+      I've been walking every day like you suggested. Great! Let me check your feet 
+      and do a quick examination. Everything looks good. Your A1C results came back 
+      at 7.2, which is much better than last time. Keep up the good work with diet 
+      and exercise. Let's schedule your next appointment in three months.
+
+# Reporting Configuration
+reporting:
+  pdf_generation:
+    enabled: true
+    template_path: "reports/pdf_generator/"
+    output_path: "reports/pdf_generator/"
+  
+  html_reports:
+    enabled: true
+    output_path: "reports/"
+    
+  metrics:
+    collect_detailed: true
+    response_time_percentiles: [50, 75, 90, 95, 99]
+    error_tracking: true
+
+# Framework Configuration
+framework:
+  log_level: "INFO"
+  retry_failed_requests: true
+  collect_metrics: true
+  save_raw_results: false 

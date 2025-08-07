@@ -1,0 +1,21 @@
+<testsuite name="Feature.glo_emr_login.gloEMR Desktop Application Login Automation" tests="1" errors="0" failures="0" skipped="0" time="95.248251" timestamp="2025-07-21T13:55:37.987225" hostname="INISKLQA03"><testcase classname="Feature.glo_emr_login.gloEMR Desktop Application Login Automation" name="Successful login with valid credentials" status="passed" time="95.248251"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @smoke @valid_login
+  Scenario: Successful login with valid credentials
+    Given I have access to Windows desktop environment ... passed in 0.000s
+    And gloEMR application is available at "C:\Program Files (x86)\gloEMR\gloEMR.exe" ... passed in 0.001s
+    Given I launch gloEMR application ... passed in 4.096s
+    When I wait for gloEMR login window to appear ... passed in 2.438s
+    And I enter username "admin" ... passed in 0.682s
+    And I enter password "admin123" ... passed in 0.783s
+    And I click Login button ... passed in 3.647s
+    Then I should be successfully logged into gloEMR application ... passed in 51.721s
+    When I click Log Out button ... passed in 30.861s
+    And I close gloEMR application ... passed in 1.020s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
