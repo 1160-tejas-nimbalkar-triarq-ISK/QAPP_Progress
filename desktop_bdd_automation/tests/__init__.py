@@ -1,1 +1,0 @@
-# Tests package for BDD desktop automation framework 
