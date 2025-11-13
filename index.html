@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QAAP Demo Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div>
+                    <h1>🎯 QAAP Demo Tracker</h1>
+                    <p class="subtitle">Track weekly QA progress and demo sequences</p>
+                </div>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <button id="adminLoginBtn" class="btn btn-secondary" onclick="openLoginModal()">
+                        <span class="btn-icon">🔐</span> Admin Login
+                    </button>
+                    <button id="adminLogoutBtn" class="btn btn-secondary" onclick="logoutAdmin()" style="display: none;">
+                        <span class="btn-icon">🚪</span> Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Demo Sequence Section -->
+            <section class="card">
+                <h2>📋 Demo Sequence (Drag to Reorder)</h2>
+                <p style="color: #666; margin-bottom: 15px; font-size: 0.9em;">Drag and drop members to change the sequence. The order will be saved automatically.</p>
+                <div class="sequence-container" id="sequenceContainer">
+                    <!-- Demo sequence will be generated here -->
+                </div>
+            </section>
+
+            <!-- Progress Tracking Section -->
+            <section class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 15px;">
+                    <h2 style="margin: 0;">📊 Weekly Progress Tracking</h2>
+                    <a href="https://triarqhealth.sharepoint.com/:x:/r/sites/development/_layouts/15/Doc.aspx?sourcedoc=%7B9A1022AA-DA0E-4E18-AED5-B2141223EE8F%7D&file=BDD_Test_Cases_Details.xlsx&wdOrigin=TEAMS-MAGLEV.null_ns.rwc&action=default&mobileredirect=true" 
+                       target="_blank" 
+                       class="btn btn-info" 
+                       title="Open Excel Sheet">
+                        <span class="btn-icon">📊</span> Open Excel Sheet
+                    </a>
+                </div>
+                <div class="week-selector">
+                    <label for="weekSelect">Select Week:</label>
+                    <input type="date" id="weekSelect" class="date-input">
+                    <button class="btn btn-primary" onclick="addNewWeek()" id="addWeekBtn" title="Add New Week">
+                        <span class="btn-icon">➕</span> Add Week
+                    </button>
+                    <button class="btn btn-danger" onclick="deleteWeek()" id="deleteWeekBtn" disabled title="Delete Selected Week">
+                        <span class="btn-icon">🗑️</span> Delete
+                    </button>
+                </div>
+
+                <div class="search-and-view-controls">
+                    <div class="search-box-container">
+                        <label for="memberSearch">🔍 Search Member:</label>
+                        <input type="text" id="memberSearch" class="search-input" placeholder="Type member name to search...">
+                    </div>
+                    <div class="view-toggle">
+                        <button id="tableViewBtn" class="btn btn-secondary view-btn active" title="Table View">
+                            <span class="btn-icon">📋</span> Table
+                        </button>
+                        <button id="graphViewBtn" class="btn btn-secondary view-btn" title="Graph View">
+                            <span class="btn-icon">📊</span> Graph
+                        </button>
+                    </div>
+                </div>
+
+                <div class="progress-grid" id="progressGrid">
+                    <!-- Progress cards will be generated here -->
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="card">
+                <h2>📈 Progress Analytics</h2>
+                <div class="charts-container">
+                    <div class="chart-wrapper">
+                        <h3>Test Cases Covered</h3>
+                        <canvas id="testCasesChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3>Excel Update Status</h3>
+                        <canvas id="excelStatusChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <h3>Demo Completion</h3>
+                        <canvas id="demoChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Export Section -->
+            <section class="card">
+                <h2>💾 Export Data & Sync</h2>
+                <div style="color: #666; font-size: 0.9em; margin-bottom: 15px; padding: 12px; background: #e3f2fd; border-radius: 8px; border-left: 4px solid #2196F3;">
+                    <strong>📋 Data Sharing Solution:</strong> Since third-party services may be restricted on office PCs, use the export/import feature to share data. Admin can export JSON file and share it via email/OneDrive/SharePoint. Others can import it to see the latest updates. Data is also stored locally in your browser.
+                </div>
+                <div class="export-buttons">
+                    <button class="btn btn-success" onclick="exportToCSV()" id="exportCSVBtn" disabled title="Export to CSV (Excel)">
+                        <span class="btn-icon">📥</span> Export CSV
+                    </button>
+                    <button class="btn btn-info" onclick="exportToJSON()" id="exportJSONBtn" title="Export to JSON (for sharing)">
+                        <span class="btn-icon">💾</span> Export JSON
+                    </button>
+                    <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importFromJSON(event)">
+                    <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()" title="Import JSON file (to get latest data)">
+                        <span class="btn-icon">📤</span> Import JSON
+                    </button>
+                </div>
+                <div style="margin-top: 15px; padding: 10px; background: #fff3cd; border-radius: 8px; font-size: 0.9em; color: #856404;">
+                    <strong>💡 Sharing Data:</strong> Admin can export JSON file and share via email/OneDrive/SharePoint. Others can import the JSON file to get the latest updates. CSV export is available for Excel compatibility.
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal for editing member progress -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Update Progress</h2>
+            <form id="progressForm">
+                <div class="form-group">
+                    <label for="memberName">Member:</label>
+                    <input type="text" id="memberName" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="weekDate">Week:</label>
+                    <input type="text" id="weekDate" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="gaveDemo">Gave Demo:</label>
+                    <input type="checkbox" id="gaveDemo">
+                </div>
+                <div class="form-group">
+                    <label for="testCases">Test Cases Covered:</label>
+                    <input type="number" id="testCases" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="excelUpdated">Excel Sheet Updated:</label>
+                    <input type="checkbox" id="excelUpdated">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-icon">💾</span> Save
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">
+                        <span class="btn-icon">✖️</span> Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>🔐 Admin Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="adminPassword">Admin Password:</label>
+                    <input type="password" id="adminPassword" placeholder="Enter admin password" required autocomplete="off" class="password-input">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="btn-icon">🔓</span> Login
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="closeLoginModal()">
+                        <span class="btn-icon">✖️</span> Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
