@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="Selenium Test Suite">
-    <test name="VerifyHomePageModules">
-        <classes>
-            <class name="com.example.VerifyHomePageModules" />
-        </classes>
-    </test>
-</suite>
